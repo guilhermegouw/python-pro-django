@@ -1,1 +1,1 @@
-# python-pro-django
+Python 3.10.4
