@@ -30,6 +30,8 @@ jobs:
     - name: GitHub Actions secret variable in a bash shell
       env:
         SECRET_KEY: ${{ secrets.Secret_KEY }}
+      run: |
+        export SECRET_KEY=env.SECRET_KEY
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
