@@ -29,7 +29,7 @@ jobs:
         if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
     - name: GitHub Actions secret variable in a bash shell
       run: |
-        export SECRET_KEY=${{ secrets.Secret_KEY }}
+        echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
 
     - name: Lint with flake8
       run: |
