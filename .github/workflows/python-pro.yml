@@ -8,6 +8,9 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  
+env:
+  SECRET_KEY: ${{ secrets.SECRET_KEY }}
 
 jobs:
   build:
@@ -29,8 +32,7 @@ jobs:
         if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
     - name: GitHub Actions secret variable in a bash shell
       run: |
-        echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
-
+        echo "SECRET_KEY=$SECRET_KEY" >> .env
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
