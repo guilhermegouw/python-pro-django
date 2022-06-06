@@ -11,6 +11,7 @@ on:
   
 env:
   SECRET_KEY: ${{ secrets.SECRET_KEY }}
+  DEBUG: ${{ secrets.DEBUG }}
 
 jobs:
   build:
@@ -33,6 +34,7 @@ jobs:
     - name: GitHub Actions secret variable in a bash shell
       run: |
         echo "SECRET_KEY=$SECRET_KEY" >> .env
+        echo "DEBUG=$DEBUG" >> .env
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
