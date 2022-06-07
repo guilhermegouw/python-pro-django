@@ -12,11 +12,17 @@ on:
 env:
   SECRET_KEY: ${{ secrets.SECRET_KEY }}
   DEBUG: ${{ secrets.DEBUG }}
+  ALLOWED_HOSTS: ${{ secrets.ALLOWED_HOSTS }}
+  DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:11
 
     steps:
     - uses: actions/checkout@v2
@@ -35,6 +41,8 @@ jobs:
       run: |
         echo "SECRET_KEY=$SECRET_KEY" >> .env
         echo "DEBUG=$DEBUG" >> .env
+        echo "ALLOWED_HOSTS=$ALLOWED_HOSTS" >> .env
+        echo "DATABASE_URL=$DATABASE_URL" >> .env
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
