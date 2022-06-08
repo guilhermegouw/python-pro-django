@@ -14,6 +14,9 @@ env:
   DEBUG: ${{ secrets.DEBUG }}
   ALLOWED_HOSTS: ${{ secrets.ALLOWED_HOSTS }}
   DATABASE_URL: ${{ secrets.DATABASE_URL }}
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  AWS_STORAGE_BUCKET_NAME: ${{ secrets.AWS_STORAGE_BUCKET_NAME }}
 
 jobs:
   build:
@@ -43,6 +46,9 @@ jobs:
         echo "DEBUG=$DEBUG" >> .env
         echo "ALLOWED_HOSTS=$ALLOWED_HOSTS" >> .env
         echo "DATABASE_URL=$DATABASE_URL" >> .env
+        echo "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" >> .env
+        echo "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" >> .env
+        echo "AWS_STORAGE_BUCKET_NAME=$AWS_STORAGE_BUCKET_NAME" >> .env
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
