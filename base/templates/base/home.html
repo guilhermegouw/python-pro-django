@@ -1,153 +1,95 @@
+{% extends 'base/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
+{% block title %}Python Pro - Home{% endblock title %}
+{% block body %}
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+			<div class="jumbotron">
+				<h2>
+					Curso de Python com Luciano Ramalho
+				</h2>
+				<!-- Begin Mailchimp Signup Form -->
+				<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet"
+					type="text/css">
+				<style type="text/css">
+					#mc_embed_signup {
+						background: #fff;
+						clear: left;
+						font: 14px Helvetica, Arial, sans-serif;
+						width: 600px;
+					}
 
-	<title>Python Pro</title>
-
-	<meta name="description" content="Página do curso Python Pro">
-	<meta name="author" content="GuilhermeGouw">
-	<link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
-
-	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-	<link href="{% static 'css/style.css' %}" rel="stylesheet">
-	<script src="{% static 'js/jquery.min.js' %}"></script>
-	<script src="{% static 'js/bootstrap.min.js' %}"></script>
-	<script src="{% static 'js/scripts.js' %}"></script>
-
-</head>
-
-<body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="{% url 'base:home' %}">Python Pro</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-			</ul>
-		</div>
-	</nav>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-
-				<div class="jumbotron">
-					<h2>
-						Curso de Python com Luciano Ramalho
-					</h2>
-					<!-- Begin Mailchimp Signup Form -->
-					<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet"
-						type="text/css">
-					<style type="text/css">
-						#mc_embed_signup {
-							background: #fff;
-							clear: left;
-							font: 14px Helvetica, Arial, sans-serif;
-							width: 600px;
-						}
-
-						/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-					</style>
-					<div id="mc_embed_signup" class="mb-4">
-						<form
-							action="https://gmail.us17.list-manage.com/subscribe/post?u=5d6666527afe4a9d1af755cd8&amp;id=8053d5f1a7"
-							method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-							class="validate" target="_blank" novalidate>
-							<div id="mc_embed_signup_scroll">
-								<h2>Entre na fila de espera</h2>
-								<div class="indicates-required"><span class="asterisk">*</span> obrigatório</div>
-								<div class="mc-field-group">
-									<label for="mce-EMAIL">Email <span class="asterisk">*</span>
-									</label>
-									<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-								</div>
-								<div class="mc-field-group">
-									<label for="mce-FNAME">Nome </label>
-									<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-								</div>
-								<div id="mce-responses" class="clear foot">
-									<div class="response" id="mce-error-response" style="display:none"></div>
-									<div class="response" id="mce-success-response" style="display:none"></div>
-								</div>
-								<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-								<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-										name="b_5d6666527afe4a9d1af755cd8_8053d5f1a7" tabindex="-1" value=""></div>
-								<div class="optionalParent">
-									<div class="clear foot">
-										<input type="submit" value="Salvar" name="salvar"
-											id="mc-embedded-subscribe" class="button" style="background-color: #0070C0;">
-									</div>
+					/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+				</style>
+				<div id="mc_embed_signup" class="mb-4">
+					<form
+						action="https://gmail.us17.list-manage.com/subscribe/post?u=5d6666527afe4a9d1af755cd8&amp;id=8053d5f1a7"
+						method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+						class="validate" target="_blank" novalidate>
+						<div id="mc_embed_signup_scroll">
+							<h2>Entre na fila de espera</h2>
+							<div class="indicates-required"><span class="asterisk">*</span> obrigatório</div>
+							<div class="mc-field-group">
+								<label for="mce-EMAIL">Email <span class="asterisk">*</span>
+								</label>
+								<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+							</div>
+							<div class="mc-field-group">
+								<label for="mce-FNAME">Nome </label>
+								<input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+							</div>
+							<div id="mce-responses" class="clear foot">
+								<div class="response" id="mce-error-response" style="display:none"></div>
+								<div class="response" id="mce-success-response" style="display:none"></div>
+							</div>
+							<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+							<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+									name="b_5d6666527afe4a9d1af755cd8_8053d5f1a7" tabindex="-1" value=""></div>
+							<div class="optionalParent">
+								<div class="clear foot">
+									<input type="submit" value="Salvar" name="salvar"
+										id="mc-embedded-subscribe" class="button" style="background-color: #0070C0;">
 								</div>
 							</div>
-						</form>
-					</div>
-					<script type='text/javascript'
-						src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-					<script
-						type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
-					<!--End mc_embed_signup-->
-					<p>
-						Confira em breve mais informações sobre o curso que será ministrado pelo autor do livro
-						<a href="https://novatec.com.br/livros/pythonfluente/" target="_blank">Python Fluente</a>
+						</div>
+					</form>
+				</div>
+				<script type='text/javascript'
+					src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+				<script
+					type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
+				<!--End mc_embed_signup-->
+				<p>
+					Confira em breve mais informações sobre o curso que será ministrado pelo autor do livro
+					<a href="https://novatec.com.br/livros/pythonfluente/" target="_blank">Python Fluente</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<h5 class="card-header">
+					Mais detalhes sobre o instrutor
+				</h5>
+				<div class="card-body">
+					<p class="card-text">
+						<img src="{% static 'img/luciano-ramalho.png' %}" alt="Foto de Luciano Ramalho"
+							class="img-thumbnail float-left mr-3">
+						Ramalho é sócio e professor na Python Pro e autor do Livro Python Fluente. Foi diretor
+						técnico do Brasil Online, primeiro portal da Abril A/A na Web. Liderou times para os portais
+						IDG Now, BOL, UOL, AOL brasil e outros, usando Python.
+						Como instrutor, atendeu clientes como Citibank, CPQD, Sempro, Presidência da República,
+						Globo.com e Itaú. Palestrante em eventos internacionais como FISL, Pycon US e OSCON. Ajudou
+						a criar a associação Python Brasil e foi seu presidente.
+						É membro da Python Software Foundation e fundador do Garoa Hacker Clube, o primeiro
+						hackerspace do Brasil.
 					</p>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<div class="card">
-					<h5 class="card-header">
-						Mais detalhes sobre o instrutor
-					</h5>
-					<div class="card-body">
-						<p class="card-text">
-							<img src="{% static 'img/luciano-ramalho.png' %}" alt="Foto de Luciano Ramalho"
-								class="img-thumbnail float-left mr-3">
-							Ramalho é sócio e professor na Python Pro e autor do Livro Python Fluente. Foi diretor
-							técnico do Brasil Online, primeiro portal da Abril A/A na Web. Liderou times para os portais
-							IDG Now, BOL, UOL, AOL brasil e outros, usando Python.
-							Como instrutor, atendeu clientes como Citibank, CPQD, Sempro, Presidência da República,
-							Globo.com e Itaú. Palestrante em eventos internacionais como FISL, Pycon US e OSCON. Ajudou
-							a criar a associação Python Brasil e foi seu presidente.
-							É membro da Python Software Foundation e fundador do Garoa Hacker Clube, o primeiro
-							hackerspace do Brasil.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<footer class="main-footer mt-5 pt-4">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<h3>Entre em contato</h3>
-						<address>
-							+55 12 997-411-854
-							<br>
-							<a href="mailto:ramalho@python.pro.br">ramalho@python.pro.br</a>
-						</address>
-					</div>
-				</div>
-			</div>
-			<div class="rights pb-4">
-				<div class="container">
-					<div class="row">
-						<div class="col">
-							{% now 'Y' %} Python Pro todos os direitos reservados
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-
-</body>
-
-</html>
+	</div>
+{% endblock body %}
