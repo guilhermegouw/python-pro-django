@@ -13,7 +13,7 @@ def test_status_code(resp):
 
 
 def test_titulo_video(resp):
-    assert_contains(resp, '<h1>Video Aperitivo: Motivação</h1>')
+    assert_contains(resp, '<h1 class="mt-4 mb-3">Video Aperitivo: Motivação</h1>')
 
 
 def test_video_template(resp):
@@ -21,6 +21,7 @@ def test_video_template(resp):
 
 
 def test_embeded_video(resp):
-    assert_contains(resp, '<iframe src="https://player.vimeo.com/video/719879800" width:"640" \
-height:"360" title="motivacao.webm" frameborder="0" webkitallowfullscreen \
-mozallowfullscreen allowfullscreen></iframe>')
+    assert_contains(
+        resp,
+        '<iframe src="https://player.vimeo.com/video/719879800" frameborder="0"></iframe>'
+    )
